@@ -17,7 +17,7 @@ if [ ! -f $lock_file ]; then
         sleep 1
     done
 
-    wp core install --url="cfrancie.42.fr" --title="Inception" --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASSWORD --admin_email="$WP_ADMIN_EMAIL" --allow-root
+    wp core install --url="login.42.fr" --title="Inception" --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASSWORD --admin_email="$WP_ADMIN_EMAIL" --allow-root
     wp user create $WP_USER $WP_EMAIL --role=subscriber --user_pass=$WP_PASSWORD --allow-root
     wp theme install twentyfourteen --activate --allow-root
     wp post delete $(wp post list --format=ids --allow-root) --allow-root

@@ -1,4 +1,4 @@
-LOGIN = cfrancie
+LOGIN = login
 
 all: setup build up
 
